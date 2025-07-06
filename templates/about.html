@@ -1,18 +1,62 @@
-{% include 'header.html' %}
-<h2>About Me</h2>
- <p>Hi, I’m Prem Prasad Pradhan.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me | Prem Prasad Pradhan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
 
-I am currently a B.Tech student, and this site showcases the full journey of my life — from school to college, from dreams to achievements.
+<body>
 
-It is a personal space where I track my academic progress, projects, and future milestones.
- </p>
-<p>This journey is still continuing, and I’m excited to keep growing and learning every day. </p>
+  <!-- Optional: Header Navbar -->
+  {% include 'header.html' %}
 
-<h2>My Motivation Line</h2>
-<p>Everything happens for a reason. Try to understand it, give your best, and turn it into something great. </p>
+  <main>
+    <!-- Main content starts -->
+    <section id="about-me" class="about-me">
+      <h2>About Me</h2>
 
+      <ul class="about-points">
+        <li><strong>Name:</strong> Prem Prasad Pradhan</li>
 
+        <li>
+          <strong>Interests:</strong>
+          <ul>
+            <li>Poster design</li>
+            <li>Technology and innovation</li>
+            <li>Leadership and creative thinking</li>
+            <li>Problem-solving and team building</li>
+          </ul>
+        </li>
 
-<footer class="site-footer">
-  <p>Made by <strong>MR.PREM</strong> | All rights reserved © 2025</p>
-</footer>
+        <li>
+          <strong>Core Skills:</strong>
+          <ul>
+            <li>C, C++, Python</li>
+            <li>Database Management (DBMS)</li>
+            <li>GitHub, Android Studio</li>
+            <li>Canva for design and visual content</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Learning Style:</strong> Hands-on learning through coding, designing, and leading small projects and teams.
+        </li>
+
+        <li>
+          <strong>Career Goal:</strong> To become a successful software developer and eventually a CEO — building solutions that create real-world impact through innovation.
+        </li>
+      </ul>
+
+      <!-- Back to Home -->
+      <div class="back-link">
+        <a href="{{ url_for('home') }}">← Back to Home</a>
+      </div>
+    </section>
+    <!-- Main content ends -->
+  </main>
+
+  <!-- Common Footer -->
+  {% include 'footer.html' %}
+</body>
+</html>

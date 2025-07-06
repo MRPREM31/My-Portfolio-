@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work Experience | Prem Prasad Pradhan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+  {% include 'header.html' %}
+
+  <main>
+    <section id="work-experience" class="work-experience">
+      <h2>Work Experience</h2>
+
+      <ul class="work-points">
+        <li><strong>Role:</strong> Team Lead & Vendor</li>
+        <li><strong>Company:</strong> DesiCrew</li>
+        <li><strong>Duration:</strong> 1.5+ years</li>
+        <li><strong>Work Type:</strong> Remote</li>
+        
+        <li><strong>Key Responsibilities:</strong>
+          <ul>
+            <li>Leading a remote team on project tasks</li>
+            <li>Coordinating with internal members and vendors</li>
+            <li>Monitoring task progress and ensuring quality</li>
+            <li>Managing reporting and task delivery flow</li>
+            <li>Onboarding and guiding new team members</li>
+          </ul>
+        </li>
+
+        <li><strong>Additional Role:</strong> Vendor – managing task distribution and resource planning</li>
+
+        <li><strong>Skills Gained:</strong>
+          Leadership, Communication, Time Management, Team Coordination, Problem Solving
+        </li>
+      </ul>
+
+      <!-- Back to Home -->
+      <div class="back-link">
+        <a href="{{ url_for('home') }}">← Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>

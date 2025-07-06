@@ -14,7 +14,9 @@ def about():
 def journey():
     return render_template("journey.html")
 
-
+@app.route("/work_experience")
+def work_experience():
+    return render_template("work-experience.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

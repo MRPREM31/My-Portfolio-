@@ -1,13 +1,70 @@
-{% include 'header.html' %}
-<h2>My Journey</h2>
- <p>I was born on 31st March 2006, and my learning journey began at the age of 3 at Saraswati Sishu Mandir. It was a wonderful place that gave me a strong foundation — both in studies and in values. The school’s culture of daily prayers and discipline helped shape my personality and thinking. I studied there up to Class 5, building the pillars of my future.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Journey | Prem Prasad Pradhan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
 
- <p>After that, I joined Odisha Adarsha Vidyalaya (OAV), which marked a turning point in my life. This is where English-medium education started, and the learning environment was excellent. I made great friends and was guided by amazing teachers who helped me grow stronger, both academically and personally. I completed my Class 10 here — a milestone I’ll always be proud of.<p>
+  <!-- Optional: Navigation -->
+  {% include 'header.html' %}
 
- </p>Then came my higher secondary journey at Nalanda Shree Higher Secondary School, Berhampur. Though it was just a short span of 2 years, I found some of my best friends here — supportive, understanding, and lifelong. My journey through Class 11 and 12 was full of learning and preparation for what came next.<p>
+  <main>
+    <!-- My Journey Section -->
+    <section id="my-journey" class="my-journey">
+      <h2>My Journey</h2>
 
- </p>Now, I’m proud to be at NIST University, Berhampur, where my engineering journey has begun. This phase marks the beginning of my dreams — exploring technology, building skills, and aiming high toward becoming something great in life.</p>
+      <ul class="journey-points">
+        <li><strong>Date of Birth:</strong> 31st March 2006</li>
 
- <footer class="site-footer">
-  <p>Made by <strong>MR.PREM</strong> | All rights reserved © 2025</p>
-</footer>
+        <li>
+          <strong>Early Learning – Saraswati Sishu Mandir</strong>
+          <ul>
+            <li>Started learning at age 3</li>
+            <li>Built strong foundation in academics and values</li>
+            <li>Daily prayers and discipline shaped my mindset</li>
+            <li>Studied up to Class 5</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Schooling – Odisha Adarsha Vidyalaya (OAV)</strong>
+          <ul>
+            <li>A major turning point in my life</li>
+            <li>Transitioned into English-medium education</li>
+            <li>Made great friends and had supportive teachers</li>
+            <li>Completed Class 10 here with pride</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Higher Secondary – Nalanda Shree Higher Secondary School</strong>
+          <ul>
+            <li>Studied Classes 11 and 12</li>
+            <li>Made close friendships and focused on career goals</li>
+            <li>Prepared for the next stage in life</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Present – NIST University, Berhampur</strong>
+          <ul>
+            <li>Currently pursuing B.Tech</li>
+            <li>Exploring technology and building technical skills</li>
+            <li>Focused on growth, learning, and future achievements</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Back to Home -->
+      <div class="back-link">
+        <a href="{{ url_for('home') }}">← Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer on all pages -->
+  {% include 'footer.html' %}
+</body>
+</html>
