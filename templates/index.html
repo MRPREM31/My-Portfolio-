@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Prem Prasad Pradhan | Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <title>Prem Prasad Pradhan | Portfolio</title>
+
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome for icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
-
-
 <body>
-    <div id="particles-js"></div>
-{% include 'header.html' %}
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
 
-</header>
+  <!-- Header -->
+  {% include 'header.html' %}
 
-<section class="hero">
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="hero-text">
-        <h2>Hi, I’m <span class="highlight">Prem Prasad Pradhan</span></h2>
-        <p>I am a <span class="highlight-role">B.Tech Student</span> at NIST University</p>
-        <p>Date of Birth: <strong>31.03.2006</strong></p>
-        <p>Place: <strong>K.Barida,Brahmpur,Odisha,India - 761031</strong></p>
-        
+      <h2 id="typewriter"></h2>
+      <p>A <span class="highlight-role">B.Tech Student</span> at NIST University</p>
+      <p><strong>DOB:</strong> 31st March 2006</p>
+      <p><strong>Location:</strong> K.Barida, Brahmapur, Odisha, India – 761031</p>
     </div>
+
     <div class="hero-image">
-        <img src="{{ url_for('static', filename='assets/avatar.png') }}" alt="Prem Prasad Pradhan">
+      <img src="{{ url_for('static', filename='assets/avatar.png') }}" alt="Prem Prasad Pradhan">
     </div>
-</section>
+  </section>
 
+  <!-- Footer -->
+  {% include 'footer.html' %}
 
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <!-- Particle JS Script -->
+  <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+  <script>
+    particlesJS.load('particles-js', "{{ url_for('static', filename='js/particles-config.json') }}", function () {
+      console.log('particles.js loaded!');
+    });
+  </script>
 
-<script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
-<script>
-  particlesJS.load('particles-js', "{{ url_for('static', filename='js/particles.json') }}", function() {
-    console.log('particles.js loaded!');
-  });
-</script>
+  <!-- Typing Effect Script -->
+  <script>
+    const text = "Hello, I'm Prem Prasad Pradhan";
+    let index = 0;
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 80);
+      }
+    }
+    window.onload = typeEffect;
+  </script>
 
+  <!-- Other JS -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
-<footer class="site-footer">
-  <p>Made by <strong>MR.PREM</strong> | All rights reserved © 2025</p>
-</footer>
 </html>
-<!-- Particle.js background -->
-<script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
-<script>
-  particlesJS.load('particles-js', "{{ url_for('static', filename='particles-config.json') }}", function() {
-    console.log('particles.js loaded - callback');
-  });
-</script>

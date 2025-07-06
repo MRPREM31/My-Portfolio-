@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>About Me | Prem Prasad Pradhan</title>
+
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Responsive Meta Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-  <!-- Optional: Header Navbar -->
+  <!-- Header Navbar -->
   {% include 'header.html' %}
 
   <main>
-    <!-- Main content starts -->
     <section id="about-me" class="about-me">
       <h2>About Me</h2>
 
@@ -40,11 +47,13 @@
         </li>
 
         <li>
-          <strong>Learning Style:</strong> Hands-on learning through coding, designing, and leading small projects and teams.
+          <strong>Learning Style:</strong>
+          Hands-on learning through coding, designing, and leading small projects and teams.
         </li>
 
         <li>
-          <strong>Career Goal:</strong> To become a successful software developer and eventually a CEO — building solutions that create real-world impact through innovation.
+          <strong>Career Goal:</strong>
+          To become a successful software developer and eventually a CEO — building solutions that create real-world impact through innovation.
         </li>
       </ul>
 
@@ -53,10 +62,9 @@
         <a href="{{ url_for('home') }}">← Back to Home</a>
       </div>
     </section>
-    <!-- Main content ends -->
   </main>
 
-  <!-- Common Footer -->
+  <!-- Common Footer with icons -->
   {% include 'footer.html' %}
 </body>
 </html>

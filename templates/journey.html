@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>My Journey | Prem Prasad Pradhan</title>
+
+  <!-- Mobile Responsive Meta Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome for Footer Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-  <!-- Optional: Navigation -->
+  <!-- Header Navbar -->
   {% include 'header.html' %}
 
   <main>
-    <!-- My Journey Section -->
     <section id="my-journey" class="my-journey">
       <h2>My Journey</h2>
 
@@ -64,7 +71,7 @@
     </section>
   </main>
 
-  <!-- Footer on all pages -->
+  <!-- Footer (with social icons) -->
   {% include 'footer.html' %}
 </body>
 </html>
