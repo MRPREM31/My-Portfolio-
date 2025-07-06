@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 50px;
+    background: #fff;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text .highlight {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.hero-text .highlight-role {
+    color: #d63384;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.btn {
+    background-color: #6c63ff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.about {
+    padding: 50px;
+    background: #f1f1f1;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar .left h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar .right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links,
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a,
+.social-links li a {
+    text-decoration: none;
+    color: #4a148c;
+    font-weight: bold;
+}
+
+.nav-links li a:hover,
+.social-links li a:hover {
+    text-decoration: underline;
+}
+/* Make page take full height */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Push footer to bottom */
+.site-footer {
+  margin-top: auto;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+/* Add to your main.css or in <style> */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send to back */
+  background-color: #ffffff; /* Optional: match your background */
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* General Section Styling */
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.section h2 {
+  font-size: 28px;
+  color: #4b0082;
+  margin-bottom: 15px;
+  border-left: 4px solid #4b0082;
+  padding-left: 12px;
+}
+
+.section p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Footer Styling */
+.site-footer {
+  background-color: #f2f2f2;
+  color: #444;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 15px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .section p {
+    font-size: 15px;
+  }
+}
+
+

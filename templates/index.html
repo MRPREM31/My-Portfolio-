@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prem Prasad Pradhan | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+
+<body>
+    <div id="particles-js"></div>
+{% include 'header.html' %}
+
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Hi, I’m <span class="highlight">Prem Prasad Pradhan</span></h2>
+        <p>I am a <span class="highlight-role">B.Tech Student</span> at NIST University</p>
+        <p>Date of Birth: <strong>31.03.2006</strong></p>
+        <p>Place: <strong>K.Barida,Brahmpur,Odisha,India - 761031</strong></p>
+        
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='assets/avatar.png') }}" alt="Prem Prasad Pradhan">
+    </div>
+</section>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+<script>
+  particlesJS.load('particles-js', "{{ url_for('static', filename='js/particles.json') }}", function() {
+    console.log('particles.js loaded!');
+  });
+</script>
+
+</body>
+<footer class="site-footer">
+  <p>Made by <strong>MR.PREM</strong> | All rights reserved © 2025</p>
+</footer>
+</html>
+<!-- Particle.js background -->
+<script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+<script>
+  particlesJS.load('particles-js', "{{ url_for('static', filename='particles-config.json') }}", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>

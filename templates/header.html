@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prem's Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="left">
+      <h2><a href="{{ url_for('home') }}" class="logo">Prem Prasad Pradhan</a></h2>
+
+    </div>
+    <div class="right">
+      <ul class="nav-links">
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('journey') }}">Journey</a></li>
+    
+        
+      </ul>
+      <ul class="social-links">
+        <li><a href="https://wa.me/qr/HMVJYHULB4RBL1" target="_blank">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/liku___pradhan?igsh=ejMzanVtbjJzOGlt" target="_blank">Instagram</a></li>
+        <li><a href="mailto:mr.prem2006@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Prem-Pradhan-303" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
