@@ -41,18 +41,6 @@ I am **Prem Prasad Pradhan**, a passionate student and aspiring software develop
 ## 📁 Folder Structure
 
 
----
-
-## 📸 Screenshots
-
-| Home Page | About Me | Projects | Contact |
-|-----------|----------|----------|---------|
-| ![Home](https://via.placeholder.com/200x120) | ![About](https://via.placeholder.com/200x120) | ![Projects](https://via.placeholder.com/200x120) | ![Contact](https://via.placeholder.com/200x120) |
-
-<!-- Replace placeholder images with actual screenshot URLs -->
-
----
-
 ## 📦 Installation Guide
 
 To run this project locally:
