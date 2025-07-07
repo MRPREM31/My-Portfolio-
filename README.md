@@ -13,7 +13,7 @@ This project showcases my skills, journey, and technical experience in web devel
 I am **Prem Prasad Pradhan**, a passionate student and aspiring software developer. This portfolio is a reflection of my dedication to learning modern web technologies and presenting my journey and projects in a professional manner.
 
 - 🌍 From: Berhampur, Odisha, India  
-- 🎓 B.Tech Student | Web & App Development Enthusiast  
+- 🎓 B.Tech Student At NIST University | Web & App Development Enthusiast  
 - 🧠 Learning: HTML, CSS, JavaScript, and Flask
 - 📬 Email: [mr.prem2006@gmail.com](mailto:mr.prem2006@gmail.com)
 
@@ -32,8 +32,8 @@ I am **Prem Prasad Pradhan**, a passionate student and aspiring software develop
 
 | Frontend      | Backend      | Deployment  |
 | ------------- | ------------ | ------------ |
-| HTML         | Python Flask | Render       |
-| CSS          |   | GitHub Pages |
+| HTML5         | Python Flask | Render       |
+| CSS3          |   | GitHub Pages |
 | JavaScript    |    | Netlify  |
 
 ---
