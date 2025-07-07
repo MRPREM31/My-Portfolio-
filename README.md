@@ -38,7 +38,7 @@ I am **Prem Prasad Pradhan**, a passionate student and aspiring software develop
 
 ---
 
-## 📁 Folder Structure
+
 
 
 ## 📦 Installation Guide
