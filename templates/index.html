@@ -24,8 +24,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
-      <h2 id="typewriter"></h2>
-      <p>A <span class="highlight-role">B.Tech Student</span> at NIST University</p>
+      <h1 id="typewriter"></h1>
+      <p>A <span class="highlight-role">B.Tech Student</span> at <strong>NIST University</strong></p>
       <p><strong>DOB:</strong> 31st March 2006</p>
       <p><strong>Location:</strong> K.Barida, Brahmapur, Odisha, India – 761031</p>
     </div>
@@ -50,17 +50,20 @@
   <script>
     const text = "Hello, I'm Prem Prasad Pradhan";
     let index = 0;
+    const speed = 70;
+
     function typeEffect() {
       if (index < text.length) {
         document.getElementById("typewriter").innerHTML += text.charAt(index);
         index++;
-        setTimeout(typeEffect, 80);
+        setTimeout(typeEffect, speed);
       }
     }
+
     window.onload = typeEffect;
   </script>
 
-  <!-- Other JS -->
+  <!-- Optional: Custom JS -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
