@@ -4,7 +4,6 @@ from flask_mail import Mail, Message
 from flask_bcrypt import Bcrypt
 from datetime import datetime
 import os
-import random
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -41,9 +40,7 @@ class Admin(db.Model):
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(200))
 
-# Temporary store for OTPs
-otp_store = {}
-
+# Portfolio routes
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -60,6 +57,7 @@ def journey():
 def work_experience():
     return render_template("work-experience.html")
 
+# Contact form
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
@@ -71,12 +69,14 @@ def contact():
         db.session.add(new_entry)
         db.session.commit()
 
+        # Email to admin
         admin_msg = Message("New Contact Submission",
                             sender=app.config['MAIL_USERNAME'],
                             recipients=[os.getenv("ADMIN_EMAIL")])
         admin_msg.body = f"Name: {name}\nEmail: {email}\nMessage: {message}\nTime: {new_entry.timestamp}"
         mail.send(admin_msg)
 
+        # Confirmation email to user
         user_msg = Message("Thanks for contacting!",
                            sender=app.config['MAIL_USERNAME'],
                            recipients=[email])
@@ -87,11 +87,13 @@ def contact():
 
     return render_template("contact.html")
 
+# Thank you page
 @app.route("/thank_you")
 def thank_you():
     name = request.args.get('name', '')
     return render_template("thank_you.html", name=name)
 
+# Admin login
 @app.route("/admin_login", methods=['GET', 'POST'])
 def admin_login():
     if request.method == 'POST':
@@ -107,6 +109,7 @@ def admin_login():
 
     return render_template("admin_login.html")
 
+# Admin dashboard
 @app.route("/admin_dashboard")
 def admin_dashboard():
     if 'admin' not in session:
@@ -115,6 +118,7 @@ def admin_dashboard():
     submissions = ContactSubmission.query.order_by(ContactSubmission.timestamp.desc()).all()
     return render_template("admin_dashboard.html", submissions=submissions)
 
+# Change password
 @app.route("/change_password", methods=['GET', 'POST'])
 def change_password():
     if 'admin' not in session:
@@ -130,59 +134,19 @@ def change_password():
 
     return render_template("change_password.html")
 
-@app.route('/forgot_password', methods=['GET', 'POST'])
-def forgot_password():
-    if request.method == 'POST':
-        email = request.form['email']
-        admin = Admin.query.filter_by(email=email).first()
-
-        if not admin:
-            flash("Email not registered!", "error")
-            return redirect(url_for('forgot_password'))
-
-        otp = str(random.randint(100000, 999999))
-        otp_store[email] = otp
-
-        msg = Message("Your OTP for Password Reset",
-                      sender=app.config['MAIL_USERNAME'],
-                      recipients=[email])
-        msg.body = f"Hi,\n\nYour OTP is: {otp}\nUse this to reset your admin password."
-        mail.send(msg)
-
-        flash("OTP sent to your email!", "success")
-        return redirect(url_for('verify_otp', email=email))
-
-    return render_template("forgot_password.html")
-
-@app.route('/verify_otp/<email>', methods=['GET', 'POST'])
-def verify_otp(email):
-    if request.method == 'POST':
-        entered_otp = request.form['otp']
-        new_password = request.form['new_password']
-
-        if otp_store.get(email) == entered_otp:
-            admin = Admin.query.filter_by(email=email).first()
-            admin.password = bcrypt.generate_password_hash(new_password).decode('utf-8')
-            db.session.commit()
-
-            otp_store.pop(email)
-            flash("Password reset successfully!", "success")
-            return redirect(url_for('admin_login'))
-        else:
-            flash("Invalid OTP!", "error")
-
-    return render_template("verify_otp.html", email=email)
-
+# Logout
 @app.route("/logout")
 def logout():
     session.pop('admin', None)
     return redirect(url_for('admin_login'))
 
+# 🛠 One-time admin creation route (REMOVE after use)
 @app.route("/create_admin")
 def create_admin():
     email = "mr.prem2006@gmail.com"
     password = "12345678"
 
+    # Prevent duplicate admin
     if Admin.query.filter_by(email=email).first():
         return "❌ Admin already exists!"
 
@@ -193,6 +157,7 @@ def create_admin():
 
     return f"✅ Admin created!\nEmail: {email}\nPassword: {password}"
 
+# Run the app
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
