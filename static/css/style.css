@@ -1011,3 +1011,15 @@ form button:hover {
     margin: 10px 0;
   }
 }
+
+/* Hide this by default on desktop */
+.mobile-only {
+  display: none;
+}
+
+/* Show only on screens ≤ 768px */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+}
