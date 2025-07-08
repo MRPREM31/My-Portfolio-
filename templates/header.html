@@ -1,18 +1,20 @@
-<!-- templates/header.html -->
 <nav class="navbar">
   <div class="logo">
     <h2><a href="{{ url_for('home') }}">MR.PREM</a></h2>
   </div>
 
-  <!-- Hamburger Menu Toggle -->
-  <input type="checkbox" id="menu-toggle" />
+  <!-- Hamburger for Mobile -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
   <label for="menu-toggle" class="hamburger">&#9776;</label>
 
+  <!-- Navigation Links -->
   <ul class="nav-links">
     <li><a href="{{ url_for('about') }}">About</a></li>
     <li><a href="{{ url_for('journey') }}">Journey</a></li>
     <li><a href="{{ url_for('work_experience') }}">Work Experience</a></li>
-    <li><a href="https://contact-form-ns4n.onrender.com/" target="_blank">Contact Me</a></li>
-   <li class="mobile-only"><a href="{{ url_for('home') }}">← Back to Home</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact Me</a></li>
+    <li><a href="{{ url_for('admin_login') }}">Admin Login</a></li>
+    <li class="mobile-only"><a href="{{ url_for('home') }}">← Back to Home</a></li>
+
   </ul>
 </nav>
