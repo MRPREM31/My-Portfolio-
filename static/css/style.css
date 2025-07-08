@@ -1834,3 +1834,94 @@ button:hover {
     padding: 0;
   }
 }
+
+/* ==== Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== Form Wrapper ==== */
+.form-container {
+  max-width: 420px;
+  margin: 60px auto;
+  background: #ffffffdd;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(6px);
+}
+
+/* ==== Heading ==== */
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center;
+  color: #333;
+}
+
+/* ==== Label and Inputs ==== */
+.form-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-container input[type="email"],
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  transition: border 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+/* ==== Submit Button ==== */
+.form-container button {
+  width: 100%;
+  background-color: #0077ff;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #005bcc;
+}
+
+/* ==== Back Link ==== */
+.form-container .back-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #0077ff;
+  text-decoration: none;
+}
+
+.form-container .back-link:hover {
+  text-decoration: underline;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 30px 20px;
+    padding: 25px;
+  }
+}
