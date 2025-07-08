@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Prem's Portfolio</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="left">
-      <h2><a href="{{ url_for('home') }}" class="logo">MR.PREM</a></h2>
+<!-- templates/header.html -->
+<nav class="navbar">
+  <div class="logo">
+    <h2><a href="{{ url_for('home') }}">MR.PREM</a></h2>
+  </div>
 
-    </div>
-    <div class="right">
-      <ul class="nav-links">
-        <li><a href="{{ url_for('about') }}">About</a></li>
-        <li><a href="{{ url_for('journey') }}">Journey</a></li>
-        <li><a href="{{ url_for('work_experience') }}">work-experience</a></li>
-       <li><a href="https://contact-form-ns4n.onrender.com/" target="_blank">☎</a></li>
+  <!-- Hamburger Menu Toggle -->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
 
-    
-
-        
-     
-    </div>
-  </nav>
+  <ul class="nav-links">
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('journey') }}">Journey</a></li>
+    <li><a href="{{ url_for('work_experience') }}">Work Experience</a></li>
+    <li><a href="https://contact-form-ns4n.onrender.com/" target="_blank">☎</a></li>
+  </ul>
+</nav>
