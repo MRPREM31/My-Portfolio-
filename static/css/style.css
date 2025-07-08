@@ -734,7 +734,7 @@ body {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
+    padding: 0px;
   }
   .hero-text h1 {
     font-size: 2rem;
@@ -1021,5 +1021,816 @@ form button:hover {
 @media (max-width: 768px) {
   .mobile-only {
     display: block;
+  }
+}
+
+
+/* === Contact Page Styling === */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    min-height: 100vh;
+}
+
+.contact-box {
+    background: white;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-box:hover {
+    transform: scale(1.01);
+}
+
+.contact-box h2 {
+    font-size: 2.2rem;
+    color: #0d47a1;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #1976d2;
+    outline: none;
+    background-color: #fff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0d47a1;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .contact-box {
+        padding: 20px;
+    }
+
+    .contact-box h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* === Thank You Page Styling === */
+
+.thank-you-container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+.thank-you-container h1 {
+    font-size: 2.2rem;
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.thank-you-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.thank-you-container a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.thank-you-container a:hover {
+    background-color: #0d47a1;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .thank-you-container {
+        padding: 30px 20px;
+        margin: 60px 10px;
+    }
+
+    .thank-you-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .thank-you-container p {
+        font-size: 1rem;
+    }
+}
+/* === Admin Login Page Styling === */
+
+.admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+}
+
+.admin-login-box {
+    background: white;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.admin-login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #1976d2;
+}
+
+.flash-message {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.admin-login-box .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-login-box input[type="email"],
+.admin-login-box input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+.admin-login-box button {
+    width: 100%;
+    background-color: #1976d2;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-login-box button:hover {
+    background-color: #0d47a1;
+}
+
+/* === Admin Dashboard Page === */
+
+.dashboard-container {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+    font-size: 2rem;
+    color: #1976d2;
+}
+
+.dashboard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.dashboard-actions a {
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-actions a:hover {
+    background-color: #0d47a1;
+}
+
+.logout-btn {
+    background-color: #ef5350;
+}
+
+.logout-btn:hover {
+    background-color: #c62828;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.submission-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.submission-table th,
+.submission-table td {
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.submission-table th {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.submission-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.no-data {
+    text-align: center;
+    color: #777;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+/* === Change Password Page === */
+
+.change-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+}
+
+.change-password-box {
+    background: white;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+
+.change-password-box h2 {
+    font-size: 1.8rem;
+    color: #1976d2;
+    margin-bottom: 20px;
+}
+
+.change-password-box .form-group {
+    margin-bottom: 20px;
+}
+
+.change-password-box input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.change-password-box button {
+    background-color: #1976d2;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.change-password-box button:hover {
+    background-color: #0d47a1;
+}
+
+.back-link {
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.flash-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* Hide mobile-only items on larger screens */
+.mobile-only {
+  display: none;
+}
+
+/* Show on smaller screens */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* Fix profile image inside hamburger menu */
+.profile-pic-container {
+  text-align: center;
+  margin: 20px auto;
+  z-index: 0;
+  position: relative;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure mobile nav menu overlays properly */
+.nav-links {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 999; /* Higher than profile-pic */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* When menu is toggled */
+#menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+.profile-pic-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo h2 a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #5b0080;
+  font-weight: 600;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile Menu Toggle (hidden checkbox) */
+#menu-toggle {
+  display: none;
+}
+
+/* Mobile-specific links (only visible in mobile) */
+.mobile-only {
+  display: none;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    display: none;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .mobile-only {
+    display: block;
+    color: #5b0080;
+    font-weight: bold;
+  }
+}
+
+/* Hide menu toggle on large screens */
+@media screen and (min-width: 768px) {
+  .menu-toggle,
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-links li {
+    padding: 0 15px;
+  }
+}
+
+/* Mobile menu behavior */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* When menu toggle is checked (mobile) */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/* --- NAVBAR BASE STYLE --- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h2 a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Nav Links Desktop */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hamburger Icon (Mobile Only) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hide checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show menu if checkbox is checked */
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+/* === NAVBAR BASE STYLE (FOR DESKTOP) === */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h2 a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Show nav-links horizontally by default */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hide hamburger & checkbox on desktop */
+.hamburger {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* === MOBILE VIEW (ONLY for width <= 768px) === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* When hamburger is toggled */
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+/* Hide on desktop, show on mobile */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+}
+.back-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #eee;
+  color: #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background-color: #ddd;
+}
+
+
+
+/* Hero Section Styling */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 5%;
+  background: transparent;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  color: #222;
+  padding-right: 30px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 24px;
+  color: #4e54c8;
+  margin-bottom: 20px;
+}
+
+.highlight-name {
+  color: #0f63ff;
+}
+
+.highlight-role {
+  color: #f76c6c;
+  font-weight: bold;
+}
+
+/* Profile Image */
+.profile-pic-container {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.bounce {
+  animation: bounce 2.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .hero-text {
+    padding: 0;
   }
 }

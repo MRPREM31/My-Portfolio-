@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h2>Contact Submissions</h2>
+    <div class="dashboard-actions">
+      <a href="{{ url_for('change_password') }}">Change Password</a>
+      <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </div>
+  </div>
+
+  {% if submissions %}
+  <div class="table-wrapper">
+    <table class="submission-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+          <th>Date & Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for sub in submissions %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ sub.name }}</td>
+          <td>{{ sub.email }}</td>
+          <td>{{ sub.message }}</td>
+          <td>{{ sub.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="no-data">No submissions found.</p>
+  {% endif %}
+<div style="text-align: center; margin-top: 20px;">
+  <a href="{{ url_for('home') }}" class="back-btn">← Back to Home</a>
+</div>
+</div>
+
+</body>
+</html>

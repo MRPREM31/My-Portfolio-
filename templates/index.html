@@ -7,7 +7,7 @@
   <!-- Mobile Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font Awesome for icons (optional) -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
@@ -30,8 +30,9 @@
       <p><strong>Location:</strong> K.Barida, Brahmapur, Odisha, India – 761031</p>
     </div>
 
-    <div class="hero-image">
-      <img src="{{ url_for('static', filename='assets/avatar.png') }}" alt="Prem Prasad Pradhan">
+    <!-- Profile Pic Wrapped in Container -->
+    <div class="profile-pic-container">
+      <img src="{{ url_for('static', filename='assets/avatar.png') }}" alt="Prem Prasad Pradhan" class="profile-pic">
     </div>
   </section>
 
